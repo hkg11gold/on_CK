@@ -1,0 +1,17 @@
+101
+-------------
+LIST OF CONTACTS
+No	Full Name	Email	Phone No	Type	Message
+Home page
+Services
+Support
+Contact
+_________________________________
+102
+DANH SÁCH THẺ NẠP
+STT	Mã khách hàng	Số diện thoại	Trị giá thẻ	Mạng	Khuyến mãi	Tổng thành tiền
+
+Dịch vụ
+Dịch vụ nạp thẻ
+Hỗ trợ
+Liên hệ

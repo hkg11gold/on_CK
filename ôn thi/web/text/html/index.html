@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-md-12">
+
+            <div class="row " style="border:  1px solid;">
+                <div class="col-md-12" style="text-align: center;">
+                    <h3>ĐIỆN LỰC GÒ VẤP</h3>
+                    <H5>THANH TOÁN TIỀN ĐIỆN</H5>
+                </div>
+            </div>
+
+            <div class="row " style="border:  1px solid;">
+                <div class="col-md-12 bg-dark" >
+                    <div class="navbar">
+                        <nav class="navbar navbar-expand-sm  navbar-dark">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link" style="color: #fff;">TRANG CHỦ</a>
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown" style="color: #fff;">Thanh Toán</a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" id="myBtn">modal</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="row" style="border:  1px solid;">
+                <div class="col-md-12" style="background-color: rgb(133, 128, 128);"> 
+                    <section>
+                        <table class="table table-striped" id="table">
+                            <tr>
+                                <th>
+                                    <tr>
+                                        <td>STT</td>
+                                        <td>Mã khách Hàng</td>
+                                        <td>Họ Tên Khách Hàng</td>
+                                        <td>Tháng Thanh Toán</td>
+                                        <td>Chỉ Số Tiêu Thụ</td>
+                                        <td>Tổng Thành Tiền</td>
+                                        <td>Hình Thức Thanh Toán</td>
+                                    </tr>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <td>0</td>
+                                <td>PE1600001234</td>
+                                <td>Hoàng Minh Tâm</td>
+                                <td>4</td>
+                                <td>112</td>
+                                <td>780000</td>
+                                <td>Ví Momo</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" style="border:  1px solid; text-align: center; background-color: #fff;">
+                    <h2>20024351-NguyenKhai-DHCNTT16c</h2>
+                </div>
+            </div>
+
+            <!-- modal fade dùng để ẩn modal khi làm xóa đi hiện ra cho dễ làm nào làm xong modal thì thêm modal fade vào ẩn để làm modal-->
+            <div class="modal fade" role="dialog" id="myModal" >
+                <div class="modal-dialog" style="background-color: #fff;">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h4 class="modal-title">THÔNG TIN KHÁCH HÀNG</h4>
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                    
+
+                        <div class="modal-body" id="my2">
+                            <form action="" method="get" class="form-horizontal">
+                                <label for="">Mã Khách Hàng</label><label id="tbmakh" style="color: red;" >*</label>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Pe1600001234" class="form-control" id="txtmakh">
+                                </div>
+
+                                <label for="">Họ tên khách hàng</label><label id="tbhoten" style="color: red;" >*</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txthoten">
+                                </div>
+
+                                <label for="ThangTT">Tháng thanh toán</label>
+                                <div class="form-group">
+                                    <select class="col-md-12 form-control" id="ThangTT">
+                                        <option ><a href="#" >1</a></option>
+                                        <option ><a href="#" >2</a></option>    
+                                        <option ><a href="#" >3</a></option>
+                                        <option ><a href="#" >4</a></option>
+                                    </select>
+                                </div>
+
+                                <label for="">Chỉ số tiêu thụ</label>
+                                <div class="form-group">
+                                    <input type="none" class="form-control" id="txtSTT" value="121" readonly style="outline: none;">
+                                </div>
+
+                                <label for="">Tổng thành tiền</label>
+                                <div class="form-group">
+                                    <input type="none" class="form-control" id="txtTTT" value="610000" readonly style="outline: none;">
+                                </div>
+
+                                <label for="">Hình thức thành tiền</label><br>
+                                <input type="radio" class="check" value="Ví Momo" name="type">Ví Momo <input type="radio" class="check" value="Tài khoảng ngân hàng" name="type">Tài khoản ngân hàng <br><br>
+                                <input type="button" value="Thanh Toán" style="color: #fff; background-color: rgb(89, 140, 188);" id="btnSave">
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <h3 style="color: red;">20024351_NguyenKhai_DHCNTT16C</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="modal fade" role="dialog" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" > <button id="btn2" style="background-color: #fff; border: 0px">ĐĂNG KÝ</button></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+        
+                        <div class="modal-body" id="my2">
+                            <form action="" method="get" class="form-horizontal">
+
+                                <label for="">Họ tên người đặt tiệc:</label><label id="tbTen" style="color: red;" >*</label>
+                                <div class="form-group">
+                                    <input type="text" name="hoten" class="form-control" placeholder="Họ Tên" id="txtTen">     
+                                </div>
+
+                                <label for="">Điện thoại liên hệ:</label><label style="color: red;" id="tbSDT">*</label>
+                                <div class="form-group">
+                                    <input type="text" name="dienthoai" class="form-control" placeholder="Điện Thoại" id="txtSDT">     
+                                </div>
+
+                                <label for="">Ngày nhận tiệc: </label><label style="color: red;" id="tbNgay">*</label>
+                                <div class="form-group">
+                                    <input type="date"  class="form-control" placeholder="Chọn ngày (dd/mm/yy)" id="txtNgay">     
+                                </div>
+
+                                <label for="">Giờ nhận tiệc: </label><label style="color: red;" id="tbgio">*</label>
+                                <div class="form-group">    
+                                    <input type="time" name="gionhantiet" class="form-control" placeholder="Giờ Nhận Tiệt" id="txtgio">     
+                                </div>
+
+                                <label for="">Số người:</label><label style="color: red;" id="tbntg">*</label>
+                                <div class="form-group">
+                                    <input type="text" name="songuoi" class="form-control" id="txtntg">     
+                                </div>
+
+                                <label for="">Loại tiệc: </label><label style="color: red;">*</label>
+                                <div class="form-group" style="width: 1px; border: 0px;">
+                                    <input type="number"  class="form-control">     
+                                </div>
+                                
+                                <div class="form-group">
+                                    <select style="height: 40px; width: 465px;">
+                                        <option class="kik" value="Finger Food">Finger Food</option>
+                                        <option class="kik" value="Set Menu">Set Menu</option>
+                                        <option class="kik" value="Buffet">Buffet </option>
+                                        <option class="kik" value="Finger Food">Finger Food</option>
+                                     </select>     
+                                </div>
+
+                                <label for=""><b>Loại phòng:<label style="color: red;">*</label></b></label><input type="radio" class="check" value="Vip">Vip <input type="radio" class="check" value="Thường">Thường <br>
+                                <label for=""><b>Dịch vụ đi kèm:</b></label> <input type="checkbox" class="checkk" value="Nhân viên phục vụ">Nhân viên phục vụ <input type="checkbox" class="checkk" value="Hoa tươi">Hoa tươi <br>
+                                <label for=""><b>Thành viên:</b></label> <input type="checkbox"><i style="color: rgb(97, 101, 221);">Nếu bạn là thành viên của nhóm</i> <br>
+                                <label for=""><b>Ghi chú:</b></label><br>
+                                <textarea name="" id="txtghichu" cols="60" rows="4" placeholder="Không gian thoáng mát"></textarea>
+        
+                                <div >
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 463px; background-color: rgb(120, 174, 171); border: 0px; margin-top: 10px;" id="btnSave">Lưu</button>
+                                </div>
+
+                            </form>     
+                        </div>
+
+                        <div class="modal-footer justify-content-end">
+                            <p style="color: red;">Host Line: 1900 6005</p>
+                         </div>
+                    </div>
+        
+                    
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+</html>
